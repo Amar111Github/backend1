@@ -6,7 +6,7 @@ const departmentRoute = express.Router();
 // const cityController = require('../controllers/cityController');
 const {verifyHR, verifyAdminHR} = require('../middleware/authMiddleware');
 
-const { getAllDepartment, createDepartment, updateDepartment, deleteDepartment } = require('../controllers/DepartmentController');
+const { getAllDepartment, createDepartment, updateDepartment } = require('../controllers/departmentController');
 
 // GET: Retrieve all countries
 // verifyHR
@@ -19,6 +19,6 @@ departmentRoute.post("/department", verifyAdminHR,  createDepartment);
 departmentRoute.put("/department/:id", verifyAdminHR,  updateDepartment);
 
 // DELETE: Delete a city
-departmentRoute.delete("/department/:id", verifyAdminHR,  deleteDepartment);
+// departmentRoute.delete("/department/:id", verifyAdminHR,  deleteDepartment);
 
 module.exports = departmentRoute;
